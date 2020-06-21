@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>浮游花</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/goods-1.css">
+  <script src="../assets/js/all.js"></script>
+</head>
+<body>
+<nav>
+<img src="../assets/image/logo.png" class="logo"/>
+<div class="ri">
+<table>
+<tr><td>
+<a href="car.html"><img src="../assets/image/car.png" class="car"/></a>
+<!--[後端]
+登入控制:若已登入則顯示登出(SignOut)+會員中心(MemberCentre)，若為管理員帳號則另新增後台管理Webmaster
+<a href="shlf.html" id="singin" class="sing">Webmaster</a>
+<a href="MemberCentre.html" id="singin" class="sing">MemberCentre</a>
+<a href="" id="singin" class="sing">SingOut</a>
+-->
+<a href="javascript:void(0)" onclick="sing(1);" id="singin" class="sing">Sign In</a>
+<a href="javascript:void(0)" onclick="sing(2);" id="create" class="sing">Register</a>
+<!--登入控制end-->
+</td></tr>
+<tr><td>
+<!--搜尋功能-->
+<form method="post" action="goods-search.html">
+<input type="search" id="search" placeholder=" Search..."/>
+</form>
+<!--end-->
+<a href="messages.html" class="go">Guestbook</a>
+<a href="we.html" class="go">About Us</a>
+<a id="cate" href="javascript:void(0)" onclick="cate();"class="go" style="position:relative;">Categories▾</a>
+<ul type="none" id="HE">
+<li><a href="goods-1.html" class="go2">Herbarium</a></li>
+<li><a href="goods-2.html" class="go2">EternalFlower</a></li>
+</ul>
+<a href="../index.html" class="go">Home</a>
+</td></tr>
+</table>
+</div>
+</nav>
+<!--內容區 高度自行調整-->
+<div style="width:100%;min-height:100%;">
+<!--背景花紋-->
+<div class="b">
+<img src="../assets/image/b3.png" class="b1"/>
+</div>
+<div class="m">
+<img src="../assets/image/moon.png" class="moon"/>
+</div>
+<!--背景花紋end-->
+<!--內容放這裡-->
+<div class="hot">
+  <br>
+  <img class="fire" src="../assets/image/fire.png">
+  <img class="fire" src="../assets/image/fire.png">
+  <img class="fire" src="../assets/image/fire.png">
+  <img class="fire" src="../assets/image/fire.png">
+  <p class="topic">♕ 熱門排行榜 ♕</p>
+  <p class="text">1.&nbsp;四季系列－春雨</p>
+  <p class="text">2.&nbsp;給愛麗絲</p>
+  <p class="text">3.&nbsp;時光之流</p>
+  <img class="fire" src="../assets/image/fire.png">
+  <img class="fire" src="../assets/image/fire.png">
+  <img class="fire" src="../assets/image/fire.png">
+  <img class="fire" src="../assets/image/fire.png">
+</div>
+<div>
+<table class="god">
+  <tr>
+    <div class="goods_tb">
+      <td align="center">
+        <a href="good.html?goodname=1"><img class="spring" src="../assets/image/h1.jpg"></a>
+        <p class="name">四季系列－春雨</p>
+      </td>
+    </div>
+    <div class="goods_tb">
+      <td align="center">
+        <a href="good.html?goodname=2"><img class="summer" src="../assets/image/h2.jpg"></a>
+        <p class="name2">四季系列－夏日</p>
+      </td>
+    </div>
+    <div class="goods_tb">
+      <td align="center">
+        <a href="good.html?goodname=3"><img class="fall" src="../assets/image/h3.jpg"></a>
+        <p class="name2">四季系列－秋風</p>
+      </td>
+    </div>
+  </tr>
+  <tr>
+    <div class="goods_tb">
+      <td align="center">
+        <a href="good.html?goodname=4" ><img class="winter" src="../assets/image/h4.jpg"></a>
+        <p class="name">四季系列－冬雪</p>
+      </td>
+    </div>
+    <div class="goods_tb">
+      <td align="center">
+        <a href="good.html?goodname=5"><img class="time" src="../assets/image/h5.jpg"></a>
+        <p class="name2">時光之流</p>
+      </td>
+    </div>
+    <div class="goods_tb">
+      <td align="center">
+        <a href="good.html?goodname=6"><img class="alice" src="../assets/image/h6.jpg"></a>
+        <p class="name2">給愛麗絲</p>
+    </div>
+  </tr>
+</table>
+</div>
+<!--內容放這裡end-->
+<!--內容區end-->
+<footer>
+&copy; No.10<br>
+Visitors:0<!--瀏覽人數-->
+</footer>
+
+<!--登入框-->
+<div class="singwindow" id="singwindow">
+<button id="x" onclick="x(1);" style="width:2vw;height:2vw;">X</button><br><br>
+<img src="../assets/image/rabit.png" class="rabit"/>
+<form method="post" action="#"><!--[後端]此處action指向帳密jsp判斷-->
+<div class="word">ID</div><input type="text" size="20" style="width:50%;font-size:1vw;height:1.2vw;"/><br><br>
+<div  class="word">Password</div><input type="password" size="20" style="width:50%;font-size:1vw;height:1.2vw;"/><br>
+<a href="javascript:void(0)" class="open" onclick="sing(3);">Forget password?</a><br><br><br>
+<a href="javascript:void(0)" class="open" onclick="sing(2);">RegisterAccount</a>
+<input class="sub" type="submit" value="Next"/>
+</form>
+</div>
+<!--登入框end-->
+<!--註冊框-->
+<div class="singwindow" id="newra">
+<button id="x" onclick="x(2);" style="width:2vw;height:2vw;">X</button><br><br>
+<img src="../assets/image/book.png" class="rabit"/>
+<form method="post" action="#"><!--[後端]此處action指向用戶判斷是否重複/成功則自動登入/失敗則回到首頁註冊框並於下端紅字提示-->
+<div class="word">ID</div><input  required="required" type="text" size="20" style="width:50%;font-size:1vw;height:1.2vw;"/><br><br>
+<div class="word">Name</div><input  required="required" type="text" size="20" style="width:50%;font-size:1vw;height:1.2vw;"/><br><br>
+<div class="word">Birthday</div><input  required="required" type="text" size="20" style="width:50%;font-size:1vw;height:1.2vw;"/><br><br>
+<div class="word">Tel</div><input  required="required" type="text" size="20" style="width:50%;font-size:1vw;height:1.2vw;"/><br><br>
+<div class="word">E-mail</div><input  required="required" type="email" size="20" style="width:50%;font-size:1vw;height:1.2vw;"/><br><br>
+<div  class="word">Password</div><input  required="required" type="password" size="20" style="width:50%;font-size:1vw;height:1.2vw;"/><br><br><br>
+<input class="sub" type="submit" value="Next"/>
+</form>
+</div>
+<!--註冊框end-->
+<!--忘記密碼框-->
+<div class="singwindow" id="forget">
+<button id="x" onclick="x(3);">X</button><br><br>
+<img src="assets/image/re.png" class="rabit"/>
+<form method="post" action="forgot.jsp"><!--[後端]此處需另外說明你們想如何判斷-->
+<div class="word">ID</div><input type="text" size="20" placeholder="Enter IDNumber" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" name="IDNumber" required/>
+<br><br>
+<div class="word">E-mail</div><input  required="required" type="email" size="20" placeholder="Enter E-mail" name="email" />
+<br><br>
+<div class="word">Tel</div><input  required="required" type="tel" size="20" placeholder="Enter Telephone Number" name="tel" /><br><br>
+
+<input class="sub" type="submit" value="Next"/>
+<input hidden  name="local" value="index.jsp">
+</form>
+</div>
+<!--忘記密碼框end-->
+</body>
+</html>

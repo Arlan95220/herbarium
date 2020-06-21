@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MemberCentre</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/all.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/MemberCentre.css">
+<script src="../assets/js/all.js"></script>
+</head>
+<body>
+<nav>
+<img src="../assets/image/logo.png" class="logo"/>
+<div class="ri">
+<table>
+<tr><td>
+<a href="car.html"><img src="../assets/image/car.png" class="car"/></a>
+<!--[後端]
+登入控制:若已登入則顯示登出(SignOut)+會員中心(MemberCentre)，若為管理員帳號則另新增後台管理Webmaster
+<a href="shlf.html" id="singin" class="sing">Webmaster</a>
+<a href="MemberCentre.html" id="singin" class="sing">MemberCentre</a>
+<a href="" id="singin" class="sing">SingOut</a>
+-->
+<a href="javascript:void(0)" onclick="sing(1);" id="singin" class="sing">Sign In</a>
+<a href="javascript:void(0)" onclick="sing(2);" id="create" class="sing">Register</a>
+<!--登入控制end-->
+</td></tr>
+<tr><td>
+<!--搜尋功能-->
+<form method="post" action="goods-search.html">
+<input type="search" id="search" placeholder=" Search..."/>
+</form>
+<!--end-->
+<a href="messages.html" class="go">Guestbook</a>
+<a href="we.html" class="go">About Us</a>
+<a id="cate" href="javascript:void(0)" onclick="cate();"class="go" style="position:relative;">Categories▾</a>
+<ul type="none" id="HE">
+<li><a href="goods-1.html" class="go2">Herbarium</a></li>
+<li><a href="goods-2.html" class="go2">EternalFlower</a></li>
+</ul>
+<a href="../index.html" class="go">Home</a>
+</td></tr>
+</table>
+</div>
+</nav>
+<!--內容區 高度自行調整-->
+<div style="width:100%;">
+<!--背景花紋-->
+<div class="b">
+<img src="../assets/image/b3.png" class="b1"/>
+</div>
+<div class="bt">
+<img src="../assets/image/b2.png" class="b2"/>
+</div>
+<div class="m">
+<img src="../assets/image/moon.png" class="moon"/>
+</div>
+<!--背景花紋end-->
+<!--內容放這裡-->
+<div class="profile">
+<table>
+<tr>
+<th colspan="5" align="center">會員資料</th>
+</tr>
+<tr>
+<td rowspan="5" align="center" class="td2"><img src="../assets/image/man.png" style="width:12vw;"></td>
+<td align="center" class="td1">ID</td><td class="td2">從後端填入ae1</td>
+<td align="center" class="td1">Name</td><td class="td2">從後端填入6</td>
+</tr>
+<tr>
+<td align="center" class="td1">Birthday</td><td colspan="3" class="td2">從後端填入</td>
+</tr>
+<tr>
+<td align="center" class="td1">Tel</td><td colspan="3" class="td2">從後端填入</td>
+</tr>
+<tr>
+<td align="center" class="td1">E-mail</td><td colspan="3" class="td2">從後端填入</td>
+</tr>
+<tr>
+<td colspan="4" align="right" class="td2"><a href="edit.html">編輯</a></td>
+</tr>
+</table>
+</div>
+<div class="other" >
+<!--購物紀錄 3個換頁-->
+<div class="buy">
+<h2>
+<img src="../assets/image/b.png" style="width:2.5vw;"/>
+<span style="vertical-align:super;">購物紀錄</span>
+<img src="../assets/image/c.png" style="width:2.5vw;"/>
+</h2>
+<div class="whatbuy">
+<!--一個紀錄框-->
+<img src="../assets/image/e1.jpg"/>
+<p>
+<span class="title">仿真花:黑色</span><br><br><!--[Name]-->
+<span class="pa">價格: $155 &nbsp;<!--[價格:$xx]-->
+數量: 3<br><br></span><!--[數量:xx]-->
+<span class="time">7999-32-23 00:00</span><br><!--時間[xx]-->
+</p>
+<hr>
+<!--一個紀錄框end-->
+</div>
+<br>
+<p align="center">1 2 3 4 5</p>
+</div>
+<!--購物紀錄end-->
+<!--評論紀錄 3個換頁-->
+<div class="say">
+<h2>
+<img src="../assets/image/b.png" style="width:2.5vw;"/>
+<span style="vertical-align:super;">評論紀錄</span>
+<img src="../assets/image/c.png" style="width:2.5vw;"/>
+</h2>
+<div class="whatbuy">
+<!--一個紀錄框-->
+<p>
+<span class="title">仿真花:黑色
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☆☆☆☆☆
+</span><!--[Name]-->
+<br><br>
+<span class="na"><!--[內容]-->
+[erhjwp[jhophqpjhqwgyawphtsrjss<br><br></span>
+<span class="time">7999-32-23 00:00</span><br><!--[時間:xx]-->
+</p>
+<hr>
+<!--一個紀錄框end-->
+</div>
+<br>
+<p align="center">1 2 3 4 5</p>
+</div>
+<!--論紀錄end-->
+</div>
+<!--內容放這裡end-->
+<!--內容區end-->
+</div>
+<footer>
+&copy; No.10<br>
+Visitors:0<!--瀏覽人數-->
+</footer>
+
+<!--登入框-->
+<div class="singwindow" id="singwindow">
+<button id="x" onclick="x(1);">X</button><br><br>
+<img src="../assets/image/rabit.png" class="rabit"/>
+<form method="post" action="#"><!--[後端]此處action指向帳密jsp判斷-->
+<div class="word">ID</div><input type="text" /><br><br>
+<div  class="word">Password</div><input type="password" size="20"/><br>
+<a href="javascript:void(0)" class="open" onclick="sing(3);">Forget password?</a><br><br><br>
+<a href="javascript:void(0)" class="open" onclick="sing(2);">RegisterAccount</a>
+<input class="sub" type="submit" value="Next"/>
+</form>
+</div>
+<!--登入框end-->
+<!--註冊框-->
+<div class="singwindow" id="newra">
+<button id="x" onclick="x(2);" style="width:2vw;height:2vw;">X</button><br><br>
+<img src="../assets/image/book.png" class="rabit"/>
+<form method="post" action="#"><!--[後端]此處action指向用戶判斷是否重複/成功則自動登入/失敗則回到首頁註冊框並於下端紅字提示-->
+<div class="word">ID</div><input  required="required" type="text" size="20" /><br><br>
+<div class="word">Name</div><input  required="required" type="text" size="20"/><br><br>
+<div class="word">Birthday</div><input  required="required" type="text" size="20"/><br><br>
+<div class="word">Tel</div><input  required="required" type="text" size="20" /><br><br>
+<div class="word">E-mail</div><input  required="required" type="email" size="20"/><br><br>
+<div  class="word">Password</div><input  required="required" type="password" size="20"/><br><br><br>
+<input class="sub" type="submit" value="Next"/>
+</form>
+</div>
+<!--註冊框end-->
+<!--忘記密碼框-->
+<div class="singwindow" id="forget">
+<button id="x" onclick="x(3);">X</button><br><br>
+<img src="assets/image/re.png" class="rabit"/>
+<form method="post" action="forgot.jsp"><!--[後端]此處需另外說明你們想如何判斷-->
+<div class="word">ID</div><input type="text" size="20" placeholder="Enter IDNumber" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" name="IDNumber" required/>
+<br><br>
+<div class="word">E-mail</div><input  required="required" type="email" size="20" placeholder="Enter E-mail" name="email" />
+<br><br>
+<div class="word">Tel</div><input  required="required" type="tel" size="20" placeholder="Enter Telephone Number" name="tel" /><br><br>
+
+<input class="sub" type="submit" value="Next"/>
+<input hidden  name="local" value="index.jsp">
+</form>
+</div>
+<!--忘記密碼框end-->
+</body>
+</html>

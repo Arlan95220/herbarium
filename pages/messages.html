@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>留言板</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/messages.css">
+<script src="../assets/js/all.js"></script>
+</head>
+<body>
+<nav>
+<img src="../assets/image/logo.png" class="logo"/>
+<div class="ri">
+<table>
+<tr><td>
+<a href="car.html"><img src="../assets/image/car.png" class="car"/></a>
+<!--[後端]
+登入控制:若已登入則顯示登出(SignOut)+會員中心(MemberCentre)，若為管理員帳號則另新增後台管理Webmaster
+<a href="shlf.html" id="singin" class="sing">Webmaster</a>
+<a href="MemberCentre.html" id="singin" class="sing">MemberCentre</a>
+<a href="" id="singin" class="sing">SingOut</a>
+-->
+<a href="javascript:void(0)" onclick="sing(1);" id="singin" class="sing">Sign In</a>
+<a href="javascript:void(0)" onclick="sing(2);" id="create" class="sing">Register</a>
+<!--登入控制end-->
+</td></tr>
+<tr><td>
+<!--搜尋功能-->
+<form method="post" action="goods-search.html">
+<input type="search" id="search" placeholder=" Search..."/>
+</form>
+<!--end-->
+<a href="messages.html" class="go">Guestbook</a>
+<a href="we.html" class="go">About Us</a>
+<a id="cate" href="javascript:void(0)" onclick="cate();"class="go" style="position:relative;">Categories▾</a>
+<ul type="none" id="HE">
+<li><a href="goods-1.html" class="go2">Herbarium</a></li>
+<li><a href="goods-2.html" class="go2">EternalFlower</a></li>
+</ul>
+<a href="../index.html" class="go">Home</a>
+</td></tr>
+</table>
+</div>
+</nav>
+<!--內容區 高度自行調整-->
+<div style="width:100%;">
+<!--背景花紋-->
+<div class="b">
+<img src="../assets/image/b3.png" class="b1"/>
+</div>
+<div class="bt">
+<img src="../assets/image/a.png" class="b2"/>
+</div>
+<div class="m">
+<img src="../assets/image/moon.png" class="moon"/>
+</div>
+<!--背景花紋end-->
+<!--內容放這裡-->
+ <img src="../assets/image/message.png" class="message"/>
+ <!--觀看留言-->
+ <div class="see">
+ <div class="see2">
+ <!--一則留言-->
+ <div class="p2">
+  <p>會員： wetwwet&nbsp;&nbsp;主旨： ewttew&nbsp;&nbsp;時間：1214142</p>
+  <p>內容：&nbsp;b6mmk4rw4,wk754w</p>
+  <hr>
+</div>
+ <!--一則留言end-->
+ <!--一則留言-->
+ <div class="p2">
+  <p>會員： wetwwet&nbsp;&nbsp;主旨： ewttew&nbsp;&nbsp;時間：1214142</p>
+  <p>內容：&nbsp;b6mmk4rw4,wk754w</p>
+  <hr>
+</div>
+ <!--一則留言end-->
+  <!--一則留言-->
+ <div class="p2">
+  <p>會員： wetwwet&nbsp;&nbsp;主旨： ewttew&nbsp;&nbsp;時間：1214142</p>
+  <p>內容：&nbsp;b6mmk4rw4,wk754w</p>
+  <hr>
+</div>
+ <!--一則留言end-->
+  </div>
+ <span class="p2"><br><< 1 2 3 4 5... >></span>
+ </div>
+ <!--觀看留言end-->
+ <!--寫留言-->
+ <div>
+<form method="post" action="" enctype="text/plain" onsubmit="alert('留言成功！')">
+    <table class="message_tb">
+      <tr class="message_tr">
+        <td class="text">主旨：</td>
+        <td><input type="text" name="subject" maxlength="30" class="message_td"></td>
+      </tr>
+      <tr class="message_tr">
+        <td class="text"><br>內容：</td>
+        <td class="message_td2"><textarea cols="40" rows="10" class="textarea"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+         <input class="cancel" type="reset" value="取消填寫">
+          <input class="submit" type="submit" value="確定送出">
+        </td>
+      </tr>
+    </table>
+  </form> 
+ </div>
+ <!--寫留言end-->
+<!--內容放這裡end-->
+<!--內容區end-->
+</div>
+<footer>
+&copy; No.10<br>
+Visitors:0<!--瀏覽人數-->
+</footer>
+
+<!--登入框-->
+<div class="singwindow" id="singwindow">
+<button id="x" onclick="x(1);" style="width:2vw;height:2vw;">X</button><br><br>
+<img src="../assets/image/rabit.png" class="rabit"/>
+<form method="post" action="#"><!--[後端]此處action指向帳密jsp判斷-->
+<div class="word">ID</div><input type="text" size="20"/><br><br>
+<div  class="word">Password</div><input type="password" size="20"/><br>
+<a href="javascript:void(0)" class="open" onclick="sing(3);">Forget password?</a><br><br><br>
+<a href="javascript:void(0)" class="open" onclick="sing(2);">RegisterAccount</a>
+<input class="sub" type="submit" value="Next"/>
+</form>
+</div>
+<!--登入框end-->
+<!--註冊框-->
+<div class="singwindow" id="newra">
+<button id="x" onclick="x(2);" style="width:2vw;height:2vw;">X</button><br><br>
+<img src="../assets/image/book.png" class="rabit"/>
+<form method="post" action="#"><!--[後端]此處action指向用戶判斷是否重複/成功則自動登入/失敗則回到首頁註冊框並於下端紅字提示-->
+<div class="word">ID</div><input  required="required" type="text" size="20"/><br><br>
+<div class="word">Name</div><input  required="required" type="text" size="20" /><br><br>
+<div class="word">Birthday</div><input  required="required" type="text" size="20"/><br><br>
+<div class="word">Tel</div><input  required="required" type="text" size="20"/><br><br>
+<div class="word">E-mail</div><input  required="required" type="email" size="20"/><br><br>
+<div  class="word">Password</div><input  required="required" type="password" size="20" /><br><br><br>
+<input class="sub" type="submit" value="Next"/>
+</form>
+</div>
+<!--註冊框end-->
+<!--忘記密碼框-->
+<div class="singwindow" id="forget">
+<button id="x" onclick="x(3);">X</button><br><br>
+<img src="../assets/image/re.png" class="rabit"/>
+<form method="post" action="forgot.jsp"><!--[後端]此處需另外說明你們想如何判斷-->
+<div class="word">ID</div><input type="text" size="20" placeholder="Enter IDNumber" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" name="IDNumber" required/>
+<br><br>
+<div class="word">E-mail</div><input  required="required" type="email" size="20" placeholder="Enter E-mail" name="email" />
+<br><br>
+<div class="word">Tel</div><input  required="required" type="tel" size="20" placeholder="Enter Telephone Number" name="tel" /><br><br>
+
+<input class="sub" type="submit" value="Next"/>
+<input hidden  name="local" value="index.jsp">
+</form>
+</div>
+<!--忘記密碼框end-->
+</body>
+</html>

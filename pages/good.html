@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Goods</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/all.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/good.css">
+<script src="../assets/js/all.js"></script>
+<script src="../assets/js/good.js"></script>
+</head>
+<body>
+<nav>
+<img src="../assets/image/logo.png" class="logo"/>
+<div class="ri">
+<table>
+<tr><td>
+<a href="car.html"><img src="../assets/image/car.png" class="car"/></a>
+<!--[後端]
+登入控制:若已登入則顯示登出(SignOut)+會員中心(MemberCentre)，若為管理員帳號則另新增後台管理Webmaster
+<a href="shlf.html" id="singin" class="sing">Webmaster</a>
+<a href="MemberCentre.html" id="singin" class="sing">MemberCentre</a>
+<a href="" id="singin" class="sing">SingOut</a>
+-->
+<a href="javascript:void(0)" onclick="sing(1);" id="singin" class="sing">Sign In</a>
+<a href="javascript:void(0)" onclick="sing(2);" id="create" class="sing">Register</a>
+<!--登入控制end-->
+</td></tr>
+<tr><td>
+<!--搜尋功能-->
+<form method="post" action="goods-search.html">
+<input type="search" id="search" placeholder=" Search..."/>
+</form>
+<!--end-->
+<a href="messages.html" class="go">Guestbook</a>
+<a href="we.html" class="go">About Us</a>
+<a id="cate" href="javascript:void(0)" onclick="cate();"class="go" style="position:relative;">Categories▾</a>
+<ul type="none" id="HE">
+<li><a href="goods-1.html" class="go2">Herbarium</a></li>
+<li><a href="goods-2.html" class="go2">EternalFlower</a></li>
+</ul>
+<a href="../index.html" class="go">Home</a>
+</td></tr>
+</table>
+</div>
+</nav>
+<!--內容區 高度自行調整-->
+<div style="width:100%;">
+<!--背景花紋-->
+<div class="b">
+<img src="../assets/image/b3.png" class="b1"/>
+</div>
+<div class="bt">
+<img src="../assets/image/b2.png" class="b2"/>
+</div>
+<div class="m">
+<img src="../assets/image/moon.png" class="moon"/>
+</div>
+<!--背景花紋end-->
+<!--內容放這裡-->
+<!---[後端]接收網址上的變數，以此更改商品區內容var goodname = 商品ID-->
+<!--商品介紹-->
+<div class="goodmessage">
+<img src="../assets/image/e1.jpg" onclick="o();"/>
+<p>
+<span class="title">仿真花: 黑色</span>
+<span class="prince"><br>$155<br><br></span>
+<span style="font-size:1.2vw;">大小:總長23cm<br>
+花卉:  防水塑料-直徑約16cm<br><br></span>
+<span style="color:#888888;">
+◎ 商品為純手工製作，下單後始製作，完成後出貨<br>
+◎ 每批商品視材料、工法調整會有些許細節不同，敬請見諒<br>
+◎ 點擊圖片放大查看
+</span>
+</p>
+<form name="form1" method="post" action="car.html">
+<span class="num">剩餘數量: x</span>
+<input type="submit" value="加入購物車" class="sub"/></aside>
+<input type="hidden" name="goods" value="仿真花:藍色"/>
+<br><br><br>
+</form>
+</div>
+<!--商品介紹end-->
+<div class="ad">
+<img src="../assets/image/ad2.jpg" id="adimg"/>
+<div id="adr1" class="adr" onmousemove ="adstop(1);" onmouseout="adstrat();" style="margin-left:5vw;"></div>
+<div id="adr2"class="adr" onmousemove ="adstop(2);"onmouseout="adstrat();" style="margin-left:7vw;opacity:1;"></div>
+<div id="adr3" class="adr" onmousemove ="adstop(3);"onmouseout="adstrat();" style="margin-left:9vw;"></div>
+</div>
+<div class="call">
+<form name="form2" method="post" action="#">
+評論<span class="st">
+<div class="star">
+    <input type="radio" name="item" id="item01"/>
+    <label class="star-item" for="item01" title="極差"></label>
+    <input type="radio" name="item" id="item02" />
+    <label class="star-item" for="item02" title="尚可"></label>
+    <input type="radio" name="item" id="item03" />
+    <label class="star-item" for="item03" title="一般"></label>
+    <input type="radio" name="item" id="item04" />
+    <label class="star-item" for="item04" title="很好"></label>
+    <input type="radio" name="item" id="item05" checked/>
+    <label class="star-item" for="item05" title="完美"></label>
+</div>
+</span><br>
+<textarea></textarea>
+<input type="submit" value="送出" class="sub"/></aside>
+</form>
+<br></br>
+<!--一則留言--><!--3個一頁-->
+<div class="oncall">
+用戶:wetewt
+☆☆☆☆☆<br><br>
+內容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容容<br><br>
+<span class="time">時間:375025092</span><br>
+<hr>
+</div>
+<!--一則留言end-->
+</div>
+<!--內容放這裡end-->
+<!--內容區end-->
+</div>
+<footer>
+&copy; No.10<br>
+Visitors:0<!--瀏覽人數-->
+</footer>
+
+<!--登入框-->
+<div class="singwindow" id="singwindow">
+<button id="x" onclick="x(1);">X</button><br><br>
+<img src="../assets/image/rabit.png" class="rabit"/>
+<form method="post" action="#"><!--[後端]此處action指向帳密jsp判斷-->
+<div class="word">ID</div><input type="text" size="20" /><br><br>
+<div  class="word">Password</div><input type="password" size="20"/><br>
+<a href="javascript:void(0)" class="open" onclick="sing(3);">Forget password?</a><br><br><br>
+<a href="javascript:void(0)" class="open" onclick="sing(2);">RegisterAccount</a>
+<input class="sub" type="submit" value="Next"/>
+</form>
+</div>
+<!--登入框end-->
+<!--註冊框-->
+<div class="singwindow" id="newra">
+<button id="x" onclick="x(2);">X</button><br><br>
+<img src="../assets/image/book.png" class="rabit"/>
+<form method="post" action="#"><!--[後端]此處action指向用戶判斷是否重複/成功則自動登入/失敗則回到首頁註冊框並於下端紅字提示-->
+<div class="word">ID</div><input  required="required" type="text" size="20"/><br><br>
+<div class="word">Name</div><input  required="required" type="text" size="20"/><br><br>
+<div class="word">Birthday</div><input  required="required" type="text" size="20" /><br><br>
+<div class="word">Tel</div><input  required="required" type="text" size="20" /><br><br>
+<div class="word">E-mail</div><input  required="required" type="email" size="20"/><br><br>
+<div  class="word">Password</div><input  required="required" type="password" size="20"/><br><br><br>
+<input class="sub" type="submit" value="Next"/>
+</form>
+</div>
+<!--註冊框end-->
+<!--忘記密碼框-->
+<div class="singwindow" id="forget">
+<button id="x" onclick="x(3);">X</button><br><br>
+<img src="../assets/image/re.png" class="rabit"/>
+<form method="post" action="forgot.jsp"><!--[後端]此處需另外說明你們想如何判斷-->
+<div class="word">ID</div><input type="text" size="20" placeholder="Enter IDNumber" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" name="IDNumber" required/>
+<br><br>
+<div class="word">E-mail</div><input  required="required" type="email" size="20" placeholder="Enter E-mail" name="email" />
+<br><br>
+<div class="word">Tel</div><input  required="required" type="tel" size="20" placeholder="Enter Telephone Number" name="tel" /><br><br>
+
+<input class="sub" type="submit" value="Next"/>
+<input hidden  name="local" value="index.jsp">
+</form>
+</div>
+<!--忘記密碼框end-->
+<!--放大圖片-->
+<div id="bigimg">
+<button onclick="bigx();">X</button>
+<br><br>
+<img src="../assets/image/e1.jpg" id="big"/>
+</div>
+<!--放大圖片end-->
+</body>
+</html>
