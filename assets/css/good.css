@@ -1,0 +1,183 @@
+@font-face {
+	font-family:王漢宗顏楷體;
+	src:url("../font/wt064.ttf");
+	}
+footer{
+bottom:-54vw;
+}
+
+
+.star{
+   display: inline-block;
+   font-size: 0;
+   position:relative;
+}
+.star-item{
+   display: inline-block;
+   width: 20px;
+   height:20px;
+   cursor: pointer;
+   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAMAAADJ7yrpAAAAYFBMVEUAAAD92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92Un92UmCTPEWAAAAH3RSTlMA9iwe++hAgPLJo13i3Td8JO3Sk4xtYkYUC76cVBIjGgBFCwAAAMtJREFUKM+1kUkOhCAQRUEFBHGep67737JRlEFNJ73wbyAv9WtRD/1O3z/AqrqzDqC7spEAkPECGagwlwRJE28wbpJAk5xjcIJ5rmBBwAsp9nLpsvJYkMWWxRk6QrHZSJFJesIU2UQnjCwLwSQ0kG4zQmzzdmcCuA5VocaQGNiyQX8G1qK/8q6jNH1wtCx3RxwhfnUkM3Vs6ToSdNUDK52NI6JL+4R1JD/HYaXriOsP9xxN+p08R0JV1ZlnzxELRBSJIPccSe1IvufoCxGAFoLwSVOBAAAAAElFTkSuQmCC') center top no-repeat;
+}
+input[type="radio"]{
+   position: absolute;
+   clip: rect(0,0,0,0)
+}
+input[type="radio"]:checked+.star-item~.star-item{
+    background-position: center bottom;
+}
+.star:hover label.star-item{
+   background-position: center top!important;
+}
+label.star-item:hover~.star-item{
+   background-position: center bottom!important;
+}
+.star-item:after{
+   position:absolute;
+   width:100px;
+   font-size:14px;
+   height:20px;
+   line-height:20px;
+   right:0;
+   margin-right:-105px;
+   color:#666
+}
+.star:hover .star-item:after{
+  content:''!important
+}
+input[type="radio"]:checked+.star-item:after{
+   content:attr(title)
+}
+
+.star:hover .star-item:hover:after{
+   content:attr(title)!important
+}
+
+.bt{
+bottom:-12vw;
+}
+.goodmessage{
+border: 2vw solid transparent;
+border-image: url('../image/goodborder2.png') 150 round;
+background:#FFFFFF7a;
+margin:0 auto;
+width:65%;
+margin-top:3vw;
+box-shadow: 0px 0px 3vw 0.3vw #FFFFFFa5;
+}
+.goodmessage img{
+cursor: pointer;
+width:20vw;
+float:left;
+margin:2vw 5vw;
+}
+.goodmessage p{
+font-family:王漢宗顏楷體;
+padding:2vw 0;
+font-size:1.2vw;
+line-height:1.8vw;
+}
+.goodmessage .title{
+font-size:2.5vw;
+margin-bottom:0.4vw;
+font-family:王漢宗顏楷體;
+}
+.goodmessage .prince{
+font-family:王漢宗顏楷體;
+font-size:1.2vw;
+color:red;
+}
+.goodmessage  .num{
+float:left;
+margin-right:13vw;
+font-family:王漢宗顏楷體;
+font-size:1.3vw;
+}
+.goodmessage .sub{
+border-radius:0.5vw;
+font-family:微軟正黑體;
+background:#5555FF;
+color:snow;
+padding:0.5vw 1.5vw;
+font-size:1.2vw;
+box-shadow: 0px 0px 3vw 0.3vw #FFFFFFe5;
+}
+.ad{
+margin:3vw 15vw;
+}
+.ad img{
+width:15vw;
+height:40vw;
+float:left;
+margin-right:8vw;
+box-shadow: 0px 0px 2vw 1vw #FFFFFF5a;
+}
+.ad .adr{
+	width:1vw;
+	height:1vw;
+	border-radius:100%;
+	background:#FFFFFF;
+	position:absolute;
+	margin-top:41vw;
+	opacity:0.3;
+}
+.ad .adr:hover{
+	opacity:1;
+	cursor: pointer;
+}
+.call{
+width:35vw;
+float:left;
+font-family:王漢宗顏楷體;
+font-size:1.8vw;
+letter-spacing:0.2vw;
+line-height:2vw;
+}
+.call .st{
+padding-left:3vw;
+letter-spacing:0.3vw;
+}
+.call textarea{
+resize:none;
+width:35vw;
+height:6vw;
+box-shadow: 0px 0px 2vw 1vw #FFFFFF5a;
+}
+.call .sub{
+float:right;
+background:#5555FF;
+color:snow;
+font-family:微軟正黑體;
+font-size:1vw;
+width:5vw;
+height:2vw;
+box-shadow: 0px 0px 2vw 1vw #FFFFFF5a;
+}
+.oncall{
+font-family:王漢宗顏楷體;
+letter-spacing:0.1vw;
+font-size:1.2vw;
+line-height:1.5vw;
+}
+.oncall .time{
+float:right;
+font-size:1vw;
+}
+#bigimg{
+width:100%;
+height:100%;
+background:#000000e5;
+position:fixed;
+top:0;
+left:0;
+z-index:15;
+display:none;
+}
+#bigimg button{
+margin-top:3vw;
+margin-left:70%;
+}
+#bigimg img{
+margin-left:30%;
+width:35vw;
+}

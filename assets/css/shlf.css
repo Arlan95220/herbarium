@@ -1,0 +1,81 @@
+@font-face {
+	font-family:王漢宗顏楷體;
+	src:url("../font/wt064.ttf");
+	}
+footer{
+bottom:0;
+}
+.all .message{
+width:20%;
+float:left;
+margin:6vw 3vw;
+}
+.all .message img{
+width:20vw;
+position:absolute;
+}
+.all .message p{
+padding:1vw;
+font-family:王漢宗顏楷體;
+font-size:1.4vw;
+text-align:center;
+}
+.all .upandbown{
+width:30%;
+float:left;
+margin-right:3vw;
+}
+.all .upandbown h1{
+text-align:center;
+font-size:2.5vw;
+font-weight:normal;
+margin-bottom:1vw;
+font-family:王漢宗顏楷體;
+text-shadow:0.05vw 0.05vw #FFFFFF;
+}
+.all .upandbown img{
+width:2.8vw;
+}
+.all .upandbown .scroll{
+width:28w;
+height:23vw;
+overflow:auto;
+background:#FFFFFF5a;
+border:solid 0.2vw ;
+margin:0px auto;
+box-shadow: 0px 0px 3vw 0.3vw #FFFFFFa5;
+}
+.all .upandbown .scroll .goods{
+margin:1vw;
+font-family:王漢宗顏楷體;
+line-height:1vw;
+}
+.all .upandbown .scroll .goods input{
+float:left;
+margin-top:3vw;
+margin-right:1vw;
+}
+.all .upandbown .scroll .goods img{
+width:5.5vw;
+float:left;
+margin-right:1vw;
+}
+.all .upandbown .scroll .goods .title{
+font-size:1.4vw;
+font-weight:bold;
+}
+.all .upandbown .scroll .goods .pa{
+font-size:1.1vw;
+line-height:1.8vw;
+}
+.all .upandbown .sub{
+float:right;
+margin-top:1vw;
+margin-right:1vw;
+background:#5555FF;
+color:snow;
+font-family:微軟正黑體;
+padding:0.2vw 1vw;
+font-size:1vw;
+box-shadow: 0px 0px 3vw 0.3vw #FFFFFFa5;
+}

@@ -1,0 +1,65 @@
+@font-face {
+	font-family:王漢宗顏楷體;
+	src:url("../font/wt064.ttf");
+	}
+.definite{
+margin:3vw auto; 
+width:60%; 
+background:url('../image/howborder.png');
+background-size:100% 100%;
+box-shadow: 0px 0px 3vw 0.3vw #FFFFFFa5;
+}
+.definite table{
+width:90%;
+margin:1vw auto;
+padding:1vw 0;
+font-family:王漢宗顏楷體;
+color:black;
+}
+.definite th{
+font-size:1.8vw;
+font-weight:normal;
+}
+.definite td{
+font-size:1.2vw;
+padding-bottom:0.3vw;
+}
+.self{
+width:60%;
+margin:5vw auto;
+}
+.self .how{
+column-count:2;
+column-rule: black solid 0.2vw;
+}
+.self .how .howsec{
+width:80%;
+-webkit-column-break-before: always;
+margin-left:5vw;
+}
+.self .how .howsec h1{
+font-size:2.8vw;
+font-family:王漢宗顏楷體;
+text-shadow:0.1vw 0.1vw #DDDDDD;
+font-weight:normal;
+margin-bottom:3vw;
+}
+.self .how .howsec img{
+width:2vw;
+margin:0.2vw 1vw;
+}
+.self .how .howsec .change{
+font-size:1.3vw;
+font-family:微軟正黑體;
+letter-spacing:0.2vw;
+}
+.self .sub{
+float:right;
+margin:2vw 1vw;
+padding:0.5vw 1.5vw;
+font-family:微軟正黑體;
+font-size:1.2vw;
+font-weight:bold;
+background:#5555FF;
+color:snow;
+}

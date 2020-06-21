@@ -1,0 +1,108 @@
+@font-face {
+	font-family:王漢宗顏楷體;
+	src:url("../font/wt064.ttf");
+	}
+.profile table{
+margin:0px auto;
+margin-top:5vw;
+width:50%;
+background:#FFFFFFd9;
+box-shadow: 0px 0px 3vw 0.3vw #FFFFFFa5;
+}
+.profile th{
+padding:0.8vw;
+font-size:2.5vw;
+font-family:王漢宗顏楷體;
+font-weight:normal;
+letter-spacing:0.2vw;
+background:#5555FF;
+color:snow;
+}
+.profile .td1{
+background:#5555FF;
+color:snow;
+padding:0.8vw;
+font-size:1.3vw;
+font-weight:bold;
+}
+.profile .td2{
+padding:0.8vw;
+font-size:1.2vw;
+font-family:微軟正黑體;
+background:#FFFFFF5a;
+}
+.profile a{
+text-decoration: none;
+background:#5555FF;
+color:snow;
+border:0.1vw solid #CCCCCC;
+font-family:微軟正黑體;
+padding:0.2vw 1vw;
+}
+.profile a:visited{
+color:snow;
+}
+.other{
+margin-top:5vw;
+}
+.buy{
+width:40%;
+margin-left:8vw; 
+float:left;
+}
+.other h2{
+text-align:center;
+font-size:3vw;
+font-weight:normal;
+font-family:王漢宗顏楷體;
+text-shadow:0.1vw 0.1vw #EEEEEE;
+}
+.whatbuy{
+height:30vw;
+overflow:auto;
+border: 2vw solid transparent;
+border-image: url('../image/goodborder2.png') 130 round;
+margin:1vw 1vw;
+background:#FFFFFF5a;
+}
+.buy .whatbuy img{
+width:8vw;
+height:8vw;
+float:left;
+padding:1vw 2vw;
+}
+.buy p{
+letter-spacing:0.1vw;
+font-size:1.3vw;	
+}
+.other .title{
+font-size:1.7vw;
+font-family:王漢宗顏楷體;
+}
+.whatbuy .pa{
+padding:0.5vw 0;
+font-size:1.3vw;
+font-family:王漢宗顏楷體;
+}
+.whatbuy .na{
+padding:0.5vw 0;
+font-size:1.2vw;
+font-family:王漢宗顏楷體;
+}
+.other .time{
+color:#888888;
+float:right;
+
+}
+.say{
+width:40%;
+margin-right:8vw;
+float:right;
+}
+.say p{
+letter-spacing:0.1vw;
+font-size:1.3vw;
+}
+footer{
+bottom:-52vw;
+}
