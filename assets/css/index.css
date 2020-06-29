@@ -78,9 +78,8 @@ display:none;
 }
 .changeback{
 position:absolute;
-right:10vw;
-bottom:5.5vw;
-
+right:1vw;
+bottom:1.8vw;
 }
 .changeback .button1{
 background:#F5DEB3;
@@ -92,8 +91,7 @@ padding:0.38vw;
 margin-right:2.5vw;
 }
 .changeback .button2{
-	font-family:Borders Divide, But Hearts Shall Conquer;
-	
+font-family:Borders Divide, But Hearts Shall Conquer;
 background:#DEB887;
 color:white;
 width:12vw;
